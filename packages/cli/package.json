@@ -10,7 +10,7 @@
     "javascript"
   ],
   "author": "Richie <yuqi.gong.home@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/cli.js",
   "bin": {
     "firmin": "bin/cli.js"
@@ -34,5 +34,5 @@
     "commander": "^7.0.0",
     "figlet": "^1.5.0"
   },
-  "gitHead": "f1e548628860c9ea1231ce8bc5fc5aa6f34eacc0"
+  "gitHead": "f740717b534df034df3ea4897fd878c562f00199"
 }
