@@ -23,7 +23,8 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
@@ -32,5 +33,6 @@
     "chalk": "^4.1.0",
     "commander": "^7.0.0",
     "figlet": "^1.5.0"
-  }
+  },
+  "gitHead": "f1e548628860c9ea1231ce8bc5fc5aa6f34eacc0"
 }
