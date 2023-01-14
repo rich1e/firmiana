@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+
+    /**
+     * @see https://blog.csdn.net/weixin_40013817/article/details/127201009
+     * @see https://github.com/typescript-eslint/typescript-eslint/issues/4268
+     */
+    // "importsNotUsedAsValues": "error",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "/@/*": ["src/*"],
+      "element-plus": ["node_modules/element-plus"],
+    },
+    "types": ["element-plus/global", "reflect-metadata"],
+    "skipLibCheck": true,
+    "noEmit": true,
+
+    /**
+     * @see https://github.com/mrmckeb/typescript-plugin-css-modules#installation
+     * @see https://www.jianshu.com/p/be1778a76763
+     * @see https://www.cnblogs.com/zhangym118/p/13364894.html
+     */
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

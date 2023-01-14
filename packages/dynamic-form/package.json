@@ -1,0 +1,62 @@
+{
+  "name": "dynamic-form",
+  "author": "rich1e",
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/dynamic-form.umd.cjs",
+  "module": "./dist/dynamic-form.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/dynamic-form.js",
+      "require": "./dist/dynamic-form.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:mock": "vite --mode development",
+    "build": "vue-tsc && vite build",
+    "build:components": "cross-env BUILD_MODE=components vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.1.3",
+    "element-plus": "1.1.0-beta.24",
+    "inversify": "^6.0.1",
+    "inversify-inject-decorators": "^3.1.0",
+    "lodash-es": "^4.17.21",
+    "reflect-metadata": "^0.1.13",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vitejs/plugin-vue-jsx": "^2.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.7.0",
+    "mockjs": "^1.1.0",
+    "sass": "^1.56.0",
+    "typescript": "^4.9.4",
+    "typescript-plugin-css-modules": "^3.4.0",
+    "unplugin-auto-import": "^0.11.4",
+    "unplugin-element-plus": "^0.4.1",
+    "unplugin-vue-components": "^0.22.9",
+    "vite": "^3.2.0",
+    "vite-plugin-dts": "^1.7.1",
+    "vite-plugin-mock": "^2.9.6",
+    "vue-tsc": "^1.0.10"
+  }
+}
