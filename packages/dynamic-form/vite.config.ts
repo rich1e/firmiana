@@ -1,9 +1,9 @@
 /*
- * @Author: gongyuqi@max-optics.com
+ * @Author: yuqigong@outlook.com
  * @Date: 2022-11-03 14:10:27
  * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2022-12-08 14:13:14
- * @FilePath: /vue-form/vite.config.ts
+ * @LastEditTime: 2023-01-28 17:05:31
+ * @FilePath: /firmiana/packages/dynamic-form/vite.config.ts
  * @Description:
  *
  */
