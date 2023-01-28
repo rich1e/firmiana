@@ -1,5 +1,11 @@
 # dynamic-form
 
+## 5.0.1
+
+### Patch Changes
+
+- [`67f0b41`](https://github.com/rich1e/firmiana/commit/67f0b411750e92f51d761d404ecdb2c67160153f) Thanks [@rich1e](https://github.com/rich1e)! - rename dynamic-form -> @firmiana/dynamic-form
+
 ## 5.0.0
 
 ### Major Changes
