@@ -2,12 +2,12 @@
  * @Author: yuqigong@outlook.com
  * @Date: 2023-01-13 17:31:37
  * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2023-01-28 15:46:13
+ * @LastEditTime: 2023-01-28 16:01:18
  * @FilePath: /firmiana/packages/dynamic-form/README.md
  * @Description:
  *
 -->
-# Dynamic Form 动态表单 v2.0
+# Dynamic Form 动态表单 v2.1
 
 ## 表单功能
 
