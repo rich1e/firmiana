@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "npx git-cz",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "rich1e",
@@ -12,9 +14,15 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.0",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "@firmiana/eslint-config": "workspace:^2.0.0",
-    "@firmiana/stylelint-config": "workspace:^0.0.0",
+    "@firmiana/stylelint-config": "workspace:^0.1.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "stylelint": "^14.16.1",
