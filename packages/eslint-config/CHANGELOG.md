@@ -1,5 +1,11 @@
 # @firmiana/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- [`6565af7`](https://github.com/rich1e/firmiana/commit/6565af7a1f9f012560e4bd7cfa1a8b5a01fe325d) Thanks [@rich1e](https://github.com/rich1e)! - add commit check
+
 ## 2.1.0
 
 ### Minor Changes
