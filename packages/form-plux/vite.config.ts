@@ -1,25 +1,25 @@
-import type { ConfigEnv, UserConfigExport } from 'vite';
-import { loadEnv } from 'vite';
-import { resolve } from 'path';
+import type { ConfigEnv, UserConfigExport } from 'vite'
+// import { loadEnv } from 'vite'
+import { resolve } from 'path'
 
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
-import { viteMockServe } from 'vite-plugin-mock';
+import { viteMockServe } from 'vite-plugin-mock'
 
 /**
  * @see https://element-plus.org/zh-CN/guide/quickstart.html#vite
  */
-import AutoImport from 'unplugin-auto-import/vite';
-import Components from 'unplugin-vue-components/vite';
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 /**
  * @see https://github.com/element-plus/unplugin-element-plus/blob/main/README.zh-CN.md
  */
-import ElementPlus from 'unplugin-element-plus/vite';
+import ElementPlus from 'unplugin-element-plus/vite'
 
-import dts from 'vite-plugin-dts';
+import dts from 'vite-plugin-dts'
 
 // console.log('BUILD_MODE', process.env.BUILD_MODE);
 
@@ -40,11 +40,11 @@ const isEnabledMock = (command: string, mode: string): boolean => {
   //   'isEnabledMock#',
   //   command !== 'build' ? mode === 'development' : mode === 'testing',
   // );
-  return command !== 'build' ? mode === 'development' : mode === 'testing';
-};
+  return command !== 'build' ? mode === 'development' : mode === 'testing'
+}
 
 const viteConfig = (command: string, mode: string) => {
-  const config: any = {};
+  const config: any = {}
 
   const plugins = [
     vue(),
@@ -77,7 +77,7 @@ const viteConfig = (command: string, mode: string) => {
     }),
 
     ElementPlus(),
-  ];
+  ]
 
   const build = {
     lib: {
@@ -96,7 +96,7 @@ const viteConfig = (command: string, mode: string) => {
         },
       },
     },
-  };
+  }
 
   // 打包组件库模式
   if (process.env.BUILD_MODE === 'components') {
@@ -109,16 +109,16 @@ const viteConfig = (command: string, mode: string) => {
         insertTypesEntry: true,
         cleanVueFileName: true,
         copyDtsFiles: false,
-      }),
-    );
+      })
+    )
 
-    config['build'] = build;
+    config.build = build
   }
 
-  config['plugins'] = plugins;
+  config.plugins = plugins
 
-  return config;
-};
+  return config
+}
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfigExport => {
@@ -142,5 +142,5 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
     },
 
     ...viteConfig(command, mode),
-  };
-};
+  }
+}

@@ -2,7 +2,7 @@
  * @Author: yuqigong@outlook.com
  * @Date: 2022-12-09 16:59:54
  * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2022-12-09 17:24:13
+ * @LastEditTime: 2023-01-30 16:45:24
  * @FilePath: /firmiana/packages/form-plux/utils.ts
  * @Description:
  *
@@ -13,13 +13,19 @@ import type { AppContext, Plugin, App } from 'vue'
  * @see https://www.linsizao.site/%E5%B0%81%E8%A3%85vue3%E6%8F%92%E4%BB%B6install%E6%96%B9%E6%B3%95/
  */
 
-export type SFCWithInstall<T> = T & Plugin;
+export type SFCWithInstall<T> = T & Plugin
 
 export type SFCInstallWithContext<T> = SFCWithInstall<T> & {
-  _context: AppContext | null,
-};
+  _context: AppContext | null
+}
 
-// 组件
+/**
+ * 组件
+ * @param main
+ * @param extra
+ * @returns
+ * @see https://github.com/youzan/vant/blob/main/packages/vant/src/utils/with-install.ts
+ */
 export const withInstall = <T, E extends Record<string, any>>(
   main: T,
   extra?: E
@@ -45,6 +51,5 @@ export const withInstallFunction = <T>(fn: T, name: string) => {
     ;(fn as SFCInstallWithContext<T>)._context = app._context
     app.config.globalProperties[name] = fn
   }
-
   return fn as SFCInstallWithContext<T>
 }
