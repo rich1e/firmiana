@@ -2,8 +2,8 @@
  * @Author: yuqigong@outlook.com
  * @Date: 2023-01-30 17:42:57
  * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2023-01-30 17:43:28
- * @FilePath: /firmiana/packages/docs/.vuepress/config/sidebar/zh.ts
+ * @LastEditTime: 2023-02-03 18:46:15
+ * @FilePath: /firmiana/packages/docs/.vuepress/configs/sidebar/zh.ts
  * @Description:
  *
  */
@@ -16,7 +16,11 @@ export const zh: SidebarConfig = {
       children: [
         {
           text: 'Button 按钮',
-          link: '/../packages/form-plux/src/button/README.md',
+          // link: '../CHANGELOG.md',
+          link: '../../../CHANGELOG.md',
+          // link: '../README.md',
+          // link: './form-plux/components/button/README.md',
+          // link: '/../packages/form-plux/components/button/README.md',
         },
       ],
     },
