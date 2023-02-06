@@ -2,36 +2,31 @@
  * @Author: yuqigong@outlook.com
  * @Date: 2023-01-30 17:31:21
  * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2023-02-03 18:41:53
- * @FilePath: /firmiana/packages/docs/.vuepress/config.ts
+ * @LastEditTime: 2023-02-06 18:30:34
+ * @FilePath: /firmiana/docs/.vuepress/config.ts
  * @Description:
  *
  */
 import { defineUserConfig, defaultTheme } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 import * as sidebar from './configs/sidebar'
-import path from 'path'
 
 console.log('aaaaaaaa', sidebar.zh['/components'][0])
 
 export default defineUserConfig({
-  base: '/firmiana/',
+  // base: '/firmiana/',
 
   pagePatterns: [
     '**/*.md',
     '!.vuepress',
     '!node_modules',
     // 查找组件的文件
-    // '../../packages/form-plux/**/*.md',
+    '../../packages/form-plux/**/*.md',
     '!../packages/**/node_modules',
   ],
 
   port: 3388,
   open: true,
-
-  alias: {
-    '@form-plux': path.resolve(__dirname, '../../form-plux'),
-  },
 
   locales: {
     '/': {
