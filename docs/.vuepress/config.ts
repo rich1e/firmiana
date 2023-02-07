@@ -2,7 +2,7 @@
  * @Author: yuqigong@outlook.com
  * @Date: 2023-01-30 17:31:21
  * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2023-02-06 18:30:34
+ * @LastEditTime: 2023-02-07 10:28:54
  * @FilePath: /firmiana/docs/.vuepress/config.ts
  * @Description:
  *
@@ -21,7 +21,7 @@ export default defineUserConfig({
     '!.vuepress',
     '!node_modules',
     // 查找组件的文件
-    '../../packages/form-plux/**/*.md',
+    '../packages/form-plux/**/*.md',
     '!../packages/**/node_modules',
   ],
 
