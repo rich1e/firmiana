@@ -1,5 +1,13 @@
 # @firmiana/eslint-config
 
+## 2.5.0
+
+### Minor Changes
+
+- [`2df6f04`](https://github.com/rich1e/firmiana/commit/2df6f04dad2f7e552a85a99336f5f5ee5b146575) Thanks [@rich1e](https://github.com/rich1e)! - docs 完成
+
+- [`3003189`](https://github.com/rich1e/firmiana/commit/3003189d09d2912c9f5219fa518a75e713e2aeaa) Thanks [@rich1e](https://github.com/rich1e)! - add vuepress-plugins
+
 ## 2.4.0
 
 ### Minor Changes
