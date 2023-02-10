@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
     "commit": "npx git-cz",
-    "prepare": "husky install"
+    "docs:dev": "pnpm --filter @firmiana/docs docs:dev"
   },
   "keywords": [],
   "author": "rich1e",

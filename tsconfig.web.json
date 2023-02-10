@@ -6,11 +6,13 @@
     "lib": ["ES2018", "DOM", "DOM.Iterable"],
     "skipLibCheck": true
   },
-  "include": ["packages/form-plux", "packages/form-plux/**/*.ts", "packages/form-plux/**/*.tsx","packages/form-plux/**/*.d.ts"],
-  "exclude": [
-    "node_modules",
-    "**/dist",
-    "**/__tests__/**/*",
-    "**/*.md"
-  ]
+  "include": [
+    "packages/vuepresss-plugins",
+    "packages/vuepresss-plugins/**/*.ts",
+    "packages/form-plux",
+    "packages/form-plux/**/*.ts",
+    "packages/form-plux/**/*.tsx",
+    "packages/form-plux/**/*.d.ts"
+  ],
+  "exclude": ["node_modules", "**/dist", "**/__tests__/**/*", "**/*.md"]
 }

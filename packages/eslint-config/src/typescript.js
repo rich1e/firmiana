@@ -1,13 +1,12 @@
 /*
- * @Author: yuqigong@outlook.com
- * @Date: 2023-01-29 17:09:29
- * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2023-01-29 17:09:38
- * @FilePath: /firmiana/packages/eslint-config/src/typescript.js
- * @Description:
+ * @Author       : yuqigong@outlook.com
+ * @Date         : 2023-02-02 17:41:13
+ * @LastEditors  : yuqigong@outlook.com
+ * @LastEditTime : 2023-02-10 17:16:38
+ * @FilePath     : /firmiana/packages/eslint-config/src/typescript.js
+ * @Description  :
  *
  */
-
 module.exports = {
   extends: [
     // https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin
@@ -23,6 +22,7 @@ module.exports = {
 
     // off rules
     '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

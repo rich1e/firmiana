@@ -1,0 +1,23 @@
+{
+  "name": "@firmiana/vuepress-plugins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/core": "2.0.0-beta.60",
+    "@vuepress/markdown": "2.0.0-beta.60",
+    "@vuepress/plugin-prismjs": "2.0.0-beta.60",
+    "@vuepress/utils": "2.0.0-beta.60",
+    "@vueuse/core": "^9.12.0",
+    "posthtml-parser": "^0.11.0",
+    "posthtml-render": "^3.0.0"
+  },
+  "devDependencies": {
+    "vite": "^4.1.1",
+    "vue": "^3.2.47"
+  }
+}

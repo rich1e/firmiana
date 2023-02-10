@@ -1,17 +1,19 @@
 /*
- * @Author: yuqigong@outlook.com
- * @Date: 2023-01-30 17:31:21
- * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2023-02-07 10:28:54
- * @FilePath: /firmiana/docs/.vuepress/config.ts
- * @Description:
+ * @Author       : yuqigong@outlook.com
+ * @Date         : 2023-02-10 16:03:34
+ * @LastEditors  : yuqigong@outlook.com
+ * @LastEditTime : 2023-02-10 18:24:01
+ * @FilePath     : /firmiana/docs/.vuepress/config.ts
+ * @Description  :
  *
  */
 import { defineUserConfig, defaultTheme } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 import * as sidebar from './configs/sidebar'
 
-console.log('aaaaaaaa', sidebar.zh['/components'][0])
+// TODO Unknown file extension ".ts"
+// import { codeBlockPlugin } from '@firmiana/vuepress-plugins'
+import { codeBlockPlugin } from '../../packages/vuepress-plugins'
 
 export default defineUserConfig({
   // base: '/firmiana/',
@@ -52,4 +54,6 @@ export default defineUserConfig({
       },
     },
   }),
+
+  plugins: [codeBlockPlugin()],
 })
