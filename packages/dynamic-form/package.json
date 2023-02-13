@@ -1,7 +1,7 @@
 {
   "name": "@firmiana/dynamic-form",
   "author": "rich1e",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "type": "module",
   "files": [
     "dist"
