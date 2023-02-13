@@ -10,7 +10,7 @@
 <script setup lang="ts">
   import BaseViewVue from '../components/Layouts/BaseView.vue';
   import DynamicForm from '../components/DynamicForm';
-  import { ConfigType } from '../components/DynamicForm/types';
+  import type { ConfigType } from '../components/DynamicForm/types';
   import {
     checkAge,
     checkEmpty,

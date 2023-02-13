@@ -22,23 +22,25 @@
 
 <style lang="scss" scoped>
   .container {
-    width: 100%;
-    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: row;
-    position: relative;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
   }
+
   .header-bar {
-    height: 100%;
     width: 300px;
+    height: 100%;
 
     h1 {
       padding: 0 20px;
     }
   }
+
   .content-main {
     flex: 1;
     // height: 100%;

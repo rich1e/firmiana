@@ -132,11 +132,12 @@ importers:
       eslint: ^8.0.1
       eslint-config-prettier: ^8.6.0
       eslint-config-standard: ^17.0.0
+      eslint-config-standard-with-typescript: ^34.0.0
       eslint-plugin-import: ^2.25.2
       eslint-plugin-n: ^15.0.0
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-promise: ^6.0.0
-      eslint-plugin-vue: ^9.7.0
+      eslint-plugin-vue: ^9.9.0
       prettier: ^2.8.3
       typescript: ^4.9.4
     dependencies:
@@ -144,6 +145,7 @@ importers:
       '@typescript-eslint/parser': 5.49.0_iukboom6ndih5an6iafl45j2fe
       eslint-config-prettier: 8.6.0_eslint@8.31.0
       eslint-config-standard: 17.0.0_nlmdxmdkpfwlku4t456ciolhy4
+      eslint-config-standard-with-typescript: 34.0.0_jtpoqfzsaq2p7a4mxoug7zdzoa
       eslint-plugin-import: 2.27.4_wawrprsyaodjx2nf77abpxkp2i
       eslint-plugin-n: 15.6.1_eslint@8.31.0
       eslint-plugin-prettier: 4.2.1_do5yx3dogbskqc4h5x5ilvlwyy
@@ -3989,6 +3991,28 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /eslint-config-standard-with-typescript/34.0.0_jtpoqfzsaq2p7a4mxoug7zdzoa:
+    resolution: {integrity: sha512-zhCsI4/A0rJ1ma8sf3RLXYc0gc7yPmdTWRVXMh9dtqeUx3yBQyALH0wosHhk1uQ9QyItynLdNOtcHKNw8G7lQw==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.0.0
+      eslint: ^8.0.1
+      eslint-plugin-import: ^2.25.2
+      eslint-plugin-n: ^15.0.0
+      eslint-plugin-promise: ^6.0.0
+      typescript: '*'
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.49.0_7fyu7tzssq62w2gougx5irpqtq
+      '@typescript-eslint/parser': 5.49.0_iukboom6ndih5an6iafl45j2fe
+      eslint: 8.31.0
+      eslint-config-standard: 17.0.0_nlmdxmdkpfwlku4t456ciolhy4
+      eslint-plugin-import: 2.27.4_wawrprsyaodjx2nf77abpxkp2i
+      eslint-plugin-n: 15.6.1_eslint@8.31.0
+      eslint-plugin-promise: 6.1.1_eslint@8.31.0
+      typescript: 4.9.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /eslint-config-standard/17.0.0_nlmdxmdkpfwlku4t456ciolhy4:
     resolution: {integrity: sha512-/2ks1GKyqSOkH7JFvXJicu0iMpoojkwB+f5Du/1SC0PtBL+s8v30k9njRZ21pm2drKYm2342jFnGWzttxPmZVg==}

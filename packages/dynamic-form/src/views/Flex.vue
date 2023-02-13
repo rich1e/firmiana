@@ -66,49 +66,47 @@
 <style lang="scss" scoped>
   // https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
   .box {
-    border: 1px dashed #ccc;
     width: 100%;
-
     margin-bottom: 10px;
+    border: 1px dashed #ccc;
 
     ul {
       display: flex;
       flex-wrap: nowrap;
-      width: 100%;
-      justify-content: space-between;
       align-items: center;
-
+      justify-content: space-between;
+      width: 100%;
       padding: 0;
       margin: 0;
 
       li {
         display: block;
         padding: 15px;
-        color: white;
         font-size: 13px;
+        color: white;
         background-color: #18e8e8;
       }
     }
   }
+
   .box2 {
-    border: 1px dashed #ccc;
     width: 100%;
+    border: 1px dashed #ccc;
 
     ul {
       display: flex;
       flex-wrap: wrap;
-      width: 100%;
-      justify-content: space-between;
       align-items: center;
-
+      justify-content: space-between;
+      width: 100%;
       padding: 0;
       margin: 0;
 
       li {
         display: inline-flex;
         flex-basis: 50%;
-        color: white;
         font-size: 13px;
+        color: white;
         background-color: #18e8e8;
       }
     }

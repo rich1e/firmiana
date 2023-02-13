@@ -7,13 +7,6 @@
  * @Description:
  *
 -->
-<script lang="ts">
-  /**
-   * @see https://github.com/vuejs/rfcs/discussions/273
-   * @see https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md#automatic-name-inference
-   */
-  export default { name: 'UniseriateView' };
-</script>
 <script setup lang="ts">
   import BaseViewVue from '../components/Layouts/BaseView.vue';
   import DynamicForm from '../components/DynamicForm';
@@ -190,6 +183,14 @@
     rule,
     actions,
   };
+</script>
+
+<script lang="ts">
+  /**
+   * @see https://github.com/vuejs/rfcs/discussions/273
+   * @see https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md#automatic-name-inference
+   */
+  export default { name: 'UniseriateView' };
 </script>
 
 <template>

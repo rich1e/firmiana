@@ -1,15 +1,12 @@
 <!--
- * @Author: rich1e
- * @Date: 2022-11-14 12:58:36
- * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2022-12-07 09:13:36
+ * @Author       : yuqigong@outlook.com
+ * @Date         : 2023-01-13 17:31:37
+ * @LastEditors  : yuqigong@outlook.com
+ * @LastEditTime : 2023-02-13 18:30:39
+ * @FilePath     : /firmiana/packages/dynamic-form/src/components/DynamicForm/src/components/FormActions.vue
+ * @Description  :
+ *
 -->
-<script lang="ts">
-  export default {
-    name: 'FormActions',
-  };
-</script>
-
 <script setup lang="ts">
   import { ElButton, ElFormItem } from 'element-plus';
   import type { PropType } from 'vue';
@@ -50,6 +47,12 @@
   const { proxy }: any = getCurrentInstance();
 
   const formRef = injectRef ?? proxy.$parent;
+</script>
+
+<script lang="ts">
+  export default {
+    name: 'FormActions',
+  };
 </script>
 
 <template>

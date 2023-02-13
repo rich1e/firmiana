@@ -1,10 +1,10 @@
 /*
- * @Author: yuqigong@outlook.com
- * @Date: 2023-01-29 17:16:18
- * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2023-01-29 17:16:22
- * @FilePath: /firmiana/packages/eslint-config/src/vue.js
- * @Description:
+ * @Author       : yuqigong@outlook.com
+ * @Date         : 2023-02-02 09:36:51
+ * @LastEditors  : yuqigong@outlook.com
+ * @LastEditTime : 2023-02-13 18:43:13
+ * @FilePath     : /firmiana/packages/eslint-config/src/vue.js
+ * @Description  :
  *
  */
 
@@ -27,6 +27,10 @@ module.exports = {
   extends: [
     // https://eslint.vuejs.org/user-guide/#bundle-configurations
     'plugin:vue/vue3-recommended',
+    'standard-with-typescript',
+    // https://juejin.cn/post/7012160233061482532
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
     './typescript',
   ],
   rules: {
@@ -36,5 +40,7 @@ module.exports = {
     'vue/require-prop-types': 'off',
     'vue/require-default-prop': 'off',
     'vue/multi-word-component-names': 'off',
+    'vue/require-valid-default-prop': 'off',
+    'vue/no-setup-props-destructure': 'off',
   },
-}
+};

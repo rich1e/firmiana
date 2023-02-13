@@ -1,3 +1,5 @@
+// https://github.com/element-plus/element-plus/blob/dev/tsconfig.base.json
+// https://github.com/microsoft/TypeScript/blob/main/src/tsconfig-base.json
 {
   "compilerOptions": {
     "outDir": "dist",
