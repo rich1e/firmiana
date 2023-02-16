@@ -2,12 +2,12 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-02-02 09:36:51
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-02-07 10:48:37
+ * @LastEditTime : 2023-02-16 11:07:17
  * @FilePath     : /firmiana/docs/.vuepress/configs/sidebar/zh.ts
  * @Description  :
  *
  */
-import type { SidebarConfig } from 'vuepress'
+import type { SidebarConfig } from 'vuepress';
 
 export const zh: SidebarConfig = {
   '/components': [
@@ -21,4 +21,4 @@ export const zh: SidebarConfig = {
       ],
     },
   ],
-}
+};

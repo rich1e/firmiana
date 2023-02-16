@@ -7,4 +7,4 @@
  * @Description:
  *
  */
-export * from './zh'
+export * from './zh';

@@ -2,7 +2,7 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-02-02 09:36:51
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-02-13 18:43:13
+ * @LastEditTime : 2023-02-16 14:10:38
  * @FilePath     : /firmiana/packages/eslint-config/src/vue.js
  * @Description  :
  *
@@ -30,6 +30,7 @@ module.exports = {
     'standard-with-typescript',
     // https://juejin.cn/post/7012160233061482532
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:prettier/recommended',
     './typescript',
   ],

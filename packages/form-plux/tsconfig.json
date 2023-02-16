@@ -1,15 +1,37 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
     "jsx": "preserve",
-    "lib": ["ES2018", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "/@/*": ["src/*"],
+      "element-plus": ["node_modules/element-plus"],
+    },
+    "types": ["element-plus/global", "reflect-metadata"],
+    "skipLibCheck": true,
+    "noEmit": true,
   },
   "include": [
     "./**/*.ts",
     "./**/*.tsx",
-    "./**/*.d.ts"
+    "./**/*.vue",
+    "./**/*.jsx",
+    "./**/*.d.ts",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "components/**/*.vue"
   ],
   "exclude": ["node_modules", "**/dist", "**/__tests__/**/*", "**/*.md"]
 }

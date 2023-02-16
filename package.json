@@ -5,8 +5,18 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm",
     "commit": "npx git-cz",
-    "docs:dev": "pnpm --filter @firmiana/docs docs:dev"
+    "docs:dev": "pnpm --filter=docs docs:dev",
+    "docs:clean": "pnpm --filter=docs docs:clean",
+    "docs:build": "pnpm --filter=docs docs:build",
+    "docs:serve": "pnpm --filter=docs docs:serve",
+    "lint:lint-staged": "lint-staged",
+    "lint:eslint": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx,vue}\"",
+    "lint:stylelint": "stylelint --fix --cache \"**/*.{css,scss,less,styl,vue}\"",
+    "lint:prettier": "prettier --write  \"**/*.{css,scss,less,styl,js,jsx,ts,tsx,vue}\"",
+    "version-packages": "changeset version",
+    "release": "pnpm --recursive --stream build && changeset publish"
   },
   "keywords": [],
   "author": "rich1e",

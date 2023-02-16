@@ -2,7 +2,7 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-02-02 09:36:51
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-02-10 18:00:41
+ * @LastEditTime : 2023-02-16 14:14:05
  * @FilePath     : /firmiana/.eslintrc.js
  * @Description  :
  *
@@ -15,5 +15,10 @@ module.exports = {
    */
   parserOptions: {
     tsconfigRootDir: __dirname,
+    // project: true,
+    // project: null,
+    project: ['./**/tsconfig.json'],
+    // project: ['./tsconfig.json', './packages/form-plux/tsconfig.json'],
+    extraFileExtensions: ['.vue'],
   },
 };

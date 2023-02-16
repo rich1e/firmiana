@@ -1,0 +1,8 @@
+es
+lib
+dist
+node_modules
+docs/.vuepress
+tsconfig.json
+packages
+.eslintrc.js
