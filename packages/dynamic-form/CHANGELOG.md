@@ -1,5 +1,13 @@
 # dynamic-form
 
+## 5.2.0
+
+### Minor Changes
+
+- [`d30b6a5`](https://github.com/rich1e/firmiana/commit/d30b6a55f67dbd9560a9f3f8a88e56a303a633be) Thanks [@rich1e](https://github.com/rich1e)! - add @firmiana/vuepress-plugin-code-block
+
+- [`d30b6a5`](https://github.com/rich1e/firmiana/commit/d30b6a55f67dbd9560a9f3f8a88e56a303a633be) Thanks [@rich1e](https://github.com/rich1e)! - add @firmiana/vuepress-plugin-code-block
+
 ## 5.1.0
 
 ### Minor Changes
