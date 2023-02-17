@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from 'vue';
 
-  import type { TableColumnCtx } from 'element-plus';
+  // import type { TableColumnCtx } from 'element-plus';
   import { ElTable, ElTableColumn, ElInput } from 'element-plus';
 
   const isNewItem = ref(false);
@@ -326,14 +326,16 @@
 <style scoped>
   .new-item {
     display: block;
-    border: 1px solid #eee;
     cursor: pointer;
+    border: 1px solid #eee;
   }
+
   .sp-input {
     display: inline-block;
     width: 50px;
     height: 20px;
   }
+
   .remove-item {
     cursor: pointer;
   }
