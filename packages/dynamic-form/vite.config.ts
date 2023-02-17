@@ -15,6 +15,7 @@ import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
 import { viteMockServe } from 'vite-plugin-mock';
+import Markdown from 'vite-plugin-md';
 
 /**
  * @see https://element-plus.org/zh-CN/guide/quickstart.html#vite
@@ -56,7 +57,9 @@ const viteConfig = (command, mode) => {
   const config: any = {};
 
   const plugins = [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
     vueJsx(),
 
     viteMockServe({
@@ -86,6 +89,8 @@ const viteConfig = (command, mode) => {
     }),
 
     ElementPlus(),
+
+    Markdown(),
   ];
 
   const build = {

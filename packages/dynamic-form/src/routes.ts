@@ -163,6 +163,14 @@ const routes: AppRouteRecord[] = [
     },
   },
 
+  {
+    path: '/markdown',
+    component: () => import('./example/markdown/index.vue'),
+    meta: {
+      title: '',
+    },
+  },
+
   // 将匹配所有内容并将其放在 `$route.params.pathMatch` 下
   {
     path: '/:pathMatch(.*)*',
