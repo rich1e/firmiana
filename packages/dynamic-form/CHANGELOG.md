@@ -1,5 +1,13 @@
 # dynamic-form
 
+## 5.3.0
+
+### Minor Changes
+
+- [`c455f3a`](https://github.com/rich1e/firmiana/commit/c455f3a9e8f3a90017e9a97bf4dc813da9f7bb8a) Thanks [@rich1e](https://github.com/rich1e)! - modify ESlint
+
+- [`e8e75e0`](https://github.com/rich1e/firmiana/commit/e8e75e0449c65fbee2c8fdc1d9f12e45aaa8618f) Thanks [@rich1e](https://github.com/rich1e)! - add markdown
+
 ## 5.2.0
 
 ### Minor Changes
