@@ -31,6 +31,11 @@ import ElementPlus from 'unplugin-element-plus/vite';
 
 import dts from 'vite-plugin-dts';
 
+// import babel from 'vite-plugin-babel';
+
+import { importAssertionsPlugin } from 'rollup-plugin-import-assert';
+import { importAssertions } from 'acorn-import-assertions';
+
 // console.log('BUILD_MODE', process.env.BUILD_MODE);
 
 /**
@@ -91,6 +96,16 @@ const viteConfig = (command, mode) => {
     ElementPlus(),
 
     Markdown(),
+
+    // babel({
+    //   babelConfig: {
+    //     babelrc: false,
+    //     configFile: false,
+    //     plugins: ['@babel/plugin-syntax-import-assertions'],
+    //   },
+    // }),
+
+    importAssertionsPlugin(),
   ];
 
   const build = {
