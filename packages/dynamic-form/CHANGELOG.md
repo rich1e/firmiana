@@ -1,5 +1,11 @@
 # dynamic-form
 
+## 5.4.0
+
+### Minor Changes
+
+- [`df3aca0`](https://github.com/rich1e/firmiana/commit/df3aca00fefb51da4a03c636bb7965ab54760217) Thanks [@rich1e](https://github.com/rich1e)! - add markdown
+
 ## 5.3.0
 
 ### Minor Changes
