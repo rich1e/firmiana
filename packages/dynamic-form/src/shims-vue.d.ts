@@ -1,10 +1,11 @@
 /*
- * @Author: your name
- * @Date: 2021-06-03 17:00:16
- * @LastEditTime: 2022-11-11 16:13:01
- * @LastEditors: yuqigong@outlook.com
- * @Description: In User Settings Edit
- * @FilePath: /vue-form/src/shims-vue.d.ts
+ * @Author       : yuqigong@outlook.com
+ * @Date         : 2021-06-03 17:00:16
+ * @LastEditors  : yuqigong@outlook.com
+ * @LastEditTime : 2023-03-01 11:04:43
+ * @FilePath     : /firmiana/packages/dynamic-form/src/shims-vue.d.ts
+ * @Description  :
+ *
  */
 // declare module '*.vue' {
 //   import { DefineComponent } from 'vue'

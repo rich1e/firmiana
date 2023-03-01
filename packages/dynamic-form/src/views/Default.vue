@@ -2,7 +2,7 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-01-13 17:31:37
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-02-17 17:16:50
+ * @LastEditTime : 2023-03-01 09:40:05
  * @FilePath     : /firmiana/packages/dynamic-form/src/views/Default.vue
  * @Description  :
  *
@@ -64,6 +64,9 @@
       </li>
       <li>
         <RouterLink to="/markdown">Markdown</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/components">Components</RouterLink>
       </li>
     </ul>
   </div>

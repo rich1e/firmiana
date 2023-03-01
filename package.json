@@ -11,6 +11,7 @@
     "docs:clean": "pnpm --filter=docs docs:clean",
     "docs:build": "pnpm --filter=docs docs:build",
     "docs:serve": "pnpm --filter=docs docs:serve",
+    "explore:dev": "pnpm --filter=@firmiana/dynamic-form dev:mock",
     "lint:lint-staged": "lint-staged",
     "lint:eslint": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx,vue}\"",
     "lint:stylelint": "stylelint --fix --cache \"**/*.{css,scss,less,styl,vue}\"",
