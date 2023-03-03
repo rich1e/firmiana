@@ -1,5 +1,11 @@
 # dynamic-form
 
+## 6.0.0
+
+### Major Changes
+
+- [`f9b5ab7`](https://github.com/rich1e/firmiana/commit/f9b5ab73cf5a3803c9a8c9c8159222426ce27e3c) Thanks [@rich1e](https://github.com/rich1e)! - add components
+
 ## 5.4.0
 
 ### Minor Changes
