@@ -2,7 +2,7 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-01-13 17:31:37
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-03-01 09:40:05
+ * @LastEditTime : 2023-06-02 18:19:57
  * @FilePath     : /firmiana/packages/dynamic-form/src/views/Default.vue
  * @Description  :
  *
@@ -67,6 +67,9 @@
       </li>
       <li>
         <RouterLink to="/components">Components</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/expression-evaluator">Expression Evaluator</RouterLink>
       </li>
     </ul>
   </div>

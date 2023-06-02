@@ -172,6 +172,14 @@ const routes: AppRouteRecord[] = [
   },
 
   {
+    path: '/expression-evaluator',
+    component: () => import('./example/expression-evaluator/index.vue'),
+    meta: {
+      title: '',
+    },
+  },
+
+  {
     path: '/components',
     component: () => import('./example/element/index.vue'),
     meta: {
