@@ -1,9 +1,8 @@
-import { computed } from 'vue';
 /*
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-06-06 13:38:06
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-06-06 16:02:06
+ * @LastEditTime : 2023-06-20 15:03:30
  */
 
 import { create, all, ConfigOptions, MathJsStatic, format } from 'mathjs';
@@ -11,11 +10,8 @@ import { create, all, ConfigOptions, MathJsStatic, format } from 'mathjs';
 /**
  * const geval = new GlobalParamsEvaluator();
  *
- * geval.add();
- * geval.set();
- * geval.computed('0.1 + 0.2')
+ * geval.computed('0.1 + 0.2');
  *
- * geval.setScope();
  * geval.import();
  * geval.checked();
  */
@@ -43,44 +39,16 @@ export default class GlobalParamsEvaluator {
   }
 
   /**
-   * 设置表达式对象
-   * @param params
-   */
-  set(params: Object) {
-    this.expressions = Object.assign(this.expressions, params);
-  }
-
-  add(key: string, exp: string) {
-    this.expressions[key] = exp;
-  }
-
-  remove(key: string) {
-    delete this.expressions[key];
-  }
-
-  clear() {
-    this.expressions = {};
-  }
-
-  /**
-   * 配置内置变量或函数
-   * @param scope
-   */
-  setScope(scope: Object) {
-    this.scoped = scope;
-  }
-
-  /**
    * 为 mathjs 动态注入变量或函数
    * @param override
    * @returns
    */
-  import(override: boolean = false) {
-    if (!this.scoped) return;
+  import(scoped: any, override: boolean = false) {
+    if (!scoped) return;
     /**
      * @see https://mathjs.org/examples/import.js.html
      */
-    this.math?.import(this.scoped, { override });
+    this.math?.import(scoped, { override });
   }
 
   /**
@@ -91,18 +59,20 @@ export default class GlobalParamsEvaluator {
    * @param expression
    * @returns
    */
-  computed(expression: string) {
-    if (!this.scoped || !expression) return;
-    return this.math?.evaluate(expression, this.scoped);
+  computed(expression: string, scoped?: any) {
+    if (!expression) return;
+    return scoped
+      ? this.math?.evaluate(expression, scoped)
+      : this.math?.evaluate(expression);
   }
 
-  checked(expressions: any[]) {
-    const res: any[] = [],
-      errs: any[] = [];
+  checked(expressions: any[], scoped: any) {
+    const res: any[] = [];
+    const errs: any[] = [];
     expressions.forEach((item: any, idx: any) => {
       try {
         const key = Object.keys(item)[0];
-        const val = this.computed(item[key]);
+        const val = this.computed(item[key], scoped);
         res.push({ val, idx });
       } catch (error) {
         if (error) {

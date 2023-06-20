@@ -2,7 +2,7 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-06-02 18:17:14
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-06-06 17:43:08
+ * @LastEditTime : 2023-06-20 14:54:38
 -->
 <script setup lang="ts">
   import { ref } from 'vue';
@@ -15,6 +15,7 @@
     findExprePropertys,
     findGlobleParam,
   } from './global-params-evaluator';
+
   import { WebPerformance } from './helper';
 
   const msg = 'Expression Evaluator';
@@ -29,7 +30,6 @@
   const isShow = ref(false);
 
   const p = new WebPerformance();
-
   const geval = new GlobalParamsEvaluator();
 
   const updateImageDisplay = (evt: any) => {
@@ -103,14 +103,12 @@
 
     const scope = formatGlobal(globleParam.value);
     const expres = findExprePropertys(result.value);
-    geval.setScope(scope);
-    geval.import(true);
-    // geval.set(expre.value);
-    const { res, checked } = geval.checked(expres);
+
+    geval.import(scope, true);
+    const { res, checked } = geval.checked(expres, scope);
 
     if (!checked) {
       const errCodes = res.map((item) => item.idx);
-
       expre.value = expre.value.map((item, idx) => {
         const { expre } = item;
         if (errCodes.includes(idx)) {
@@ -148,32 +146,32 @@
 
   <div class="wrapper">
     <div class="expre-view">
-      <h2
-        >Find Expre: <span>{{ expre.length }}</span>
+      <h2>
+        Find Expre: <span>{{ expre.length }}</span>
         <span> {{ showTime }} </span>
       </h2>
       <div class="expre-view--sub">
         <p v-for="(item, idx) in expre">
-          <span :class="item.select ? 'err' : ''"
-            >{{ idx }} - {{ item.expre }}</span
-          >
+          <span :class="item.select ? 'err' : ''">
+            {{ idx }} - {{ item.expre }}
+          </span>
         </p>
       </div>
     </div>
 
     <div class="expre-view">
-      <h2
-        >Global Parameters: <span>{{ globleParam.length }}</span></h2
-      >
+      <h2>
+        Global Parameters: <span>{{ globleParam.length }}</span>
+      </h2>
       <div class="expre-view--sub">
         <pre v-html="globleParamJSON"></pre>
       </div>
     </div>
 
     <div class="expre-view">
-      <h2
-        >Find ExpObj: <span>{{ Object.keys(expObj).length }}</span></h2
-      >
+      <h2>
+        Find ExpObj: <span>{{ Object.keys(expObj).length }}</span>
+      </h2>
       <div class="expre-view--sub">
         <pre v-html="expObjJSON"></pre>
       </div>
