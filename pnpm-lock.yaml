@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -98,6 +98,9 @@ importers:
       mathjs:
         specifier: ^11.8.0
         version: 11.8.0
+      on-change:
+        specifier: ^4.0.2
+        version: 4.0.2
       reflect-metadata:
         specifier: ^0.1.13
         version: 0.1.13
@@ -2454,7 +2457,7 @@ packages:
       '@types/markdown-it': 12.2.3
       '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.57.1)
       fp-ts: 2.13.1
-      inferred-types: 0.37.6(happy-dom@8.4.3)(sass@1.57.1)
+      inferred-types: 0.37.6(sass@1.57.1)
       markdown-it: 13.0.1
       vite-plugin-md: 0.22.5(@vitejs/plugin-vue@3.2.0)(sass@1.57.1)(vite@3.2.5)
     transitivePeerDependencies:
@@ -2478,7 +2481,7 @@ packages:
     resolution: {integrity: sha512-TLtRc/mxI74ahP3s+fJpIi+lBFAhuJuVjiQhmyi/xEwJ2pDepuWMRXT6UfJOA1cGkZ5/XGa9NFw/SQR6M5jfoQ==}
     engines: {node: '>=14.0'}
     dependencies:
-      inferred-types: 0.37.6(happy-dom@8.4.3)(sass@1.57.1)
+      inferred-types: 0.37.6(sass@1.57.1)
       js-yaml: 4.1.0
       kind-of: 6.0.3
       section-matter: 1.0.0
@@ -2882,6 +2885,28 @@ packages:
       bumpp: 8.2.1
       callsites: 4.0.0
       inferred-types: 0.37.6(happy-dom@8.4.3)(sass@1.57.1)
+      vitest: 0.25.8(happy-dom@8.4.3)(sass@1.57.1)
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@vitest/browser'
+      - '@vitest/ui'
+      - happy-dom
+      - jsdom
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+    dev: true
+
+  /brilliant-errors@0.7.3(sass@1.57.1):
+    resolution: {integrity: sha512-WT9BkAze4SUOJfr7LUwJWNDAvynEAvUMvMPuFKu8QQKnRq+WMx3DAtHfOBJjHmHRxf748JY3CNVytSk6HH2yGg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      bumpp: 8.2.1
+      callsites: 4.0.0
+      inferred-types: 0.37.6(sass@1.57.1)
       vitest: 0.25.8(happy-dom@8.4.3)(sass@1.57.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
@@ -5457,6 +5482,24 @@ packages:
       - terser
     dev: true
 
+  /inferred-types@0.37.6(sass@1.57.1):
+    resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
+    dependencies:
+      brilliant-errors: 0.7.3(sass@1.57.1)
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@vitest/browser'
+      - '@vitest/ui'
+      - happy-dom
+      - jsdom
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+    dev: true
+
   /inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     dependencies:
@@ -6658,6 +6701,11 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.1.4
       es-abstract: 1.21.1
+    dev: false
+
+  /on-change@4.0.2:
+    resolution: {integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
   /on-finished@2.3.0:

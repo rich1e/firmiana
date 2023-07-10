@@ -30,6 +30,7 @@
     "lodash-es": "^4.17.21",
     "marked": "^4.2.12",
     "mathjs": "^11.8.0",
+    "on-change": "^4.0.2",
     "reflect-metadata": "^0.1.13",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
