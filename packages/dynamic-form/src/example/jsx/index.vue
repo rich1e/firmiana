@@ -51,6 +51,7 @@
         },
       };
 
+      const InInputRef = ref(null);
       const initInputValue = ref('');
 
       const textInputOptions = {
@@ -59,6 +60,7 @@
         clearable: true,
         onChange: (val: any) => {
           console.log('text onChange', val);
+          InInputRef.value?.getValue();
         },
         // onChange 是 Element Plus 事件，onchange 是DOM原始事件
         // onchange: (val: any) => {
@@ -174,7 +176,11 @@
             {...selectAttrs}
           />
           <ElDivider>InInput</ElDivider>
-          <InInput v-model={initInputValue.value} {...textInputOptions} />
+          <InInput
+            ref={InInputRef}
+            v-model={initInputValue.value}
+            {...textInputOptions}
+          />
           <InInput v-model={initInputValue.value} {...textareaInputOptions} />
           <ElDivider>InRadio</ElDivider>
           <InRadio

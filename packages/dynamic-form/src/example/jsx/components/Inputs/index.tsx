@@ -1,4 +1,10 @@
 /*
+ * @Author       : yuqigong@outlook.com
+ * @Date         : 2023-01-13 17:31:37
+ * @LastEditors  : yuqigong@outlook.com
+ * @LastEditTime : 2023-07-17 15:51:15
+ */
+/*
  * @Author: yuqigong@outlook.com
  * @Date: 2022-11-21 17:05:16
  * @LastEditors: yuqigong@outlook.com
@@ -18,8 +24,14 @@ export default defineComponent({
   // props: {
   //   ...inputProps,
   // },
-  setup(_, { attrs }) {
+  setup(_, { attrs, expose }) {
     // console.log('InInput#', attrs);
+    const getValue = () => {
+      console.log('getValue');
+    };
+
+    expose({ getValue });
+
     return () => <ElInput {...attrs} />;
   },
 });
