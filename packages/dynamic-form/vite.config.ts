@@ -36,6 +36,11 @@ import dts from 'vite-plugin-dts';
 import { importAssertionsPlugin } from 'rollup-plugin-import-assert';
 import { importAssertions } from 'acorn-import-assertions';
 
+import {
+  createStyleImportPlugin,
+  VxeTableResolve,
+} from 'vite-plugin-style-import';
+
 // console.log('BUILD_MODE', process.env.BUILD_MODE);
 
 /**
@@ -106,6 +111,11 @@ const viteConfig = (command, mode) => {
     // }),
 
     importAssertionsPlugin(),
+
+    // vxe-table 按需加载
+    createStyleImportPlugin({
+      resolves: [VxeTableResolve()],
+    }),
   ];
 
   const build = {

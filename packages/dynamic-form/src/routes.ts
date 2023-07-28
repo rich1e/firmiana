@@ -196,6 +196,14 @@ const routes: AppRouteRecord[] = [
   },
 
   {
+    path: '/vxe-table',
+    component: () => import('./example/vxe-table/index.vue'),
+    meta: {
+      title: '',
+    },
+  },
+
+  {
     path: '/components',
     component: () => import('./example/element/index.vue'),
     meta: {

@@ -2,7 +2,7 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-01-13 17:31:37
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-07-06 18:37:47
+ * @LastEditTime : 2023-07-27 14:19:26
  * @FilePath     : /firmiana/packages/dynamic-form/src/views/Default.vue
  * @Description  :
  *
@@ -76,6 +76,9 @@
       </li>
       <li>
         <RouterLink to="/watch-an-object">Watch an Object</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/vxe-table">VXE Table</RouterLink>
       </li>
     </ul>
   </div>
