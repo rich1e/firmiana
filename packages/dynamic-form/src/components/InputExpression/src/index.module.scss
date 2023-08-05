@@ -1,0 +1,131 @@
+@import url('@firmiana/styles/src/mixin');
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(144 147 153 / 30%);
+  border-radius: 2px;
+  box-shadow: inset 0 0 6px rgb(0 0 0 / 20%);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(0 0 0 / 5%);
+}
+
+@include b(input-expression) {
+  @include e(input_icon) {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+  }
+
+  @include e(fn_icon) {
+    position: absolute;
+    top: 4px;
+    left: -9px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+  }
+
+  @include e(var_icon) {
+    position: absolute;
+    top: 4px;
+    left: -9px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+  }
+
+  @include e(inner) {
+    @include m(warn) {
+      border-color: red;
+    }
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 0.6em 0 2em;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: #3b3b3d;
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  position: relative;
+  height: 22px;
+  line-height: 22px;
+}
+
+@include b(candidate) {
+  @include e(mask) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: flex;
+  }
+
+  @include e(container) {
+    @include e(plus) {
+      position: relative;
+      padding: 5px 5px 5px 25px;
+      cursor: pointer;
+    }
+
+    @include e(plus_icon) {
+      position: absolute;
+      top: 5px;
+      left: 3px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
+
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 33%);
+    transition: all 0.3s ease;
+  }
+
+  @include e(scroll) {
+    @include e(item) {
+      @include m(active) {
+        background-color: #e9e9e9;
+      }
+
+      position: relative;
+      height: 24px;
+      padding-left: 13px;
+
+      &:hover {
+        background-color: #e9e9e9;
+      }
+    }
+
+    @include m(max) {
+      height: 168px;
+      overflow-y: auto;
+    }
+
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+    text-indent: 1em;
+    list-style: none;
+  }
+}

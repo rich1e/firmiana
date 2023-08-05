@@ -69,8 +69,8 @@
 
 <style lang="scss" scoped>
   .cust-group {
-    border: 1px solid #e3e3e3;
-    margin-bottom: 15px;
     padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #e3e3e3;
   }
 </style>

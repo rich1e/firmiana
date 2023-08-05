@@ -1,0 +1,9 @@
+{
+  "name": "@firmiana/global-evaluator",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "module": "index.ts",
+  "dependencies": {
+    "mathjs": "^11.8.0"
+  }
+}

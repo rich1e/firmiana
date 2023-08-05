@@ -1,0 +1,11 @@
+{
+  "name": "@firmiana/styles",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "pnpm rimraf node_modules && pnpm rimraf dist"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "golden-layout": "^2.6.0"
+  }
+}

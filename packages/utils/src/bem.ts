@@ -2,25 +2,33 @@
  * @Author       : yuqigong@outlook.com
  * @Date         : 2023-07-25 10:16:31
  * @LastEditors  : yuqigong@outlook.com
- * @LastEditTime : 2023-07-26 10:47:52
+ * @LastEditTime : 2023-07-28 17:42:54
  */
-
 import { prefixCls } from './constants';
 import type { CSSProperties } from 'vue';
 
 type Mold = string | { [key: string]: any };
 type Molds = Mold | Mold[];
 
+/**
+ * @see https://stackoverflow.com/questions/57086672/element-implicitly-has-an-any-type-because-expression-of-type-string-cant-b
+ */
+type CSSValue = keyof CSSProperties;
+
 export type BEMClass = ReturnType<typeof createBEMClass>;
 
 type CreateNamespace = {
+  /** 组件名称，包含命名空间 e.g. fir-input-expression */
   blockName: string;
-  bem: (...arg: string[]) => string;
+  /** BEM 风格的 Class 名称 */
   bemClass: (...arg: string[]) => string;
+  /** BEM 风格的 CSS Modules 名称 */
+  bemCSSModule: (...arg: string[]) => string;
 };
 
 /**
  * @see https://getbem.com/
+ * @see https://en.bem.info/methodology/css/
  *
  * BEM 命名格式
  *
@@ -31,25 +39,29 @@ type CreateNamespace = {
  * Mofifier 与 Block/Element 使用双连接符 “--” 连接。
  * modifier-name 和 modifier_value 之间使用单下画线 “_” 连接。
  *
- * 示例：
+ * 示例 1：
  *
- * const [prefix, bem, bemClass] = createNameSpace('input', styles);
+ * const [blockName, bemClass] = createNameSpace('input');
  *
- * bem() // 'mo-input' 创建块
+ * bemClass() // 'fir-input' 创建块
  *
- * bem('inner') // 'mo-input__inner' 创建元素
+ * bemClass('inner') // 'fir-input__inner' 创建元素
  *
- * bem(['disabled']) // 'mo-input mo-input--disabled' 创建块修改器
- * bem({disabled: true}) // 'mo-input mo-input--disabled' 创建块修改器
- * bem(['disabled', 'primary']) // 'mo-input mo-input--disabled mo-input--primary' 创建多个块修改器
+ * bemClass(['disabled']) // 'fir-input fir-input--disabled' 创建块修改器
+ * bemClass({disabled: true}) // 'fir-input fir-input--disabled' 创建块修改器
+ * bemClass(['disabled', 'primary']) // 'fir-input fir-input--disabled fir-input--primary' 创建多个块修改器
  *
- * bem('inner', 'disabled') // 'mo-input__inner mo-input__inner--disabled' 创建元素修改器
- * bem('inner', {disabled: true}) // 'mo-input__inner mo-input__inner--disabled' 创建元素修改器
- * bem('inner', {open: true, active: true}) // 'mo-input__inner mo-input__inner--open mo-input__inner--active' 创建多个元素修改器
+ * bemClass('inner', 'disabled') // 'fir-input__inner fir-input__inner--disabled' 创建元素修改器
+ * bemClass('inner', {disabled: true}) // 'fir-input__inner fir-input__inner--disabled' 创建元素修改器
+ * bemClass('inner', {open: true, active: true}) // 'fir-input__inner fir-input__inner--open fir-input__inner--active' 创建多个元素修改器
  *
- * bemClass 与 bem 的方法和参数均一样，返回值为 CSS Module 风格的 BEM Class 名称。
+ * 示例 2：
  *
- * bemClass('scroll', 'max') // '_mo-candidate__scroll_jsj0b_80 _mo-candidate__scroll--max_jsj0b_99'
+ * const [blockName, bemClass, bemCSSModule] = createNameSpace('input', cssModule);
+ *
+ * bemClass 与 bemCSSModule 的方法和参数均一样，返回值为 CSS Module 风格的 BEM Class 名称。
+ *
+ * bemCSSModule('scroll', 'max') // '_fir-candidate__scroll_jsj0b_80 _fir-candidate__scroll--max_jsj0b_99'
  */
 
 /**
@@ -66,7 +78,7 @@ function genBem(name: string, mold: Molds, cssModule?: CSSProperties): string {
   // 如果是字符串，则拼接上 blockName 返回
   if (typeof mold === 'string') {
     const classname = `${name}--${mold}`;
-    return cssModule ? ` ${cssModule[classname]}` : ` ${classname}`;
+    return cssModule ? ` ${cssModule[classname as CSSValue]}` : ` ${classname}`;
   }
 
   // 递归处理每个数组元素
@@ -104,7 +116,11 @@ export function createBEMClass(blockName: string, cssModule?: CSSProperties) {
     // 拼接 blockName，生成带 modifier 的类名
     // return `${elementName}${genBem(elementName, mold)}`;
     return cssModule
-      ? `${cssModule[elementName]}${genBem(elementName, mold, cssModule)}`
+      ? `${cssModule[elementName as CSSValue]}${genBem(
+          elementName,
+          mold,
+          cssModule,
+        )}`
       : `${elementName}${genBem(elementName, mold)}`;
   };
 }
@@ -121,10 +137,9 @@ export function createNamespace(
   prefix = false,
 ): CreateNamespace {
   const blockName = prefix ? `${name}` : `${prefixCls}-${name}`;
-
   return {
     blockName,
-    bem: createBEMClass(blockName),
-    bemClass: createBEMClass(blockName, cssModule),
+    bemClass: createBEMClass(blockName),
+    bemCSSModule: createBEMClass(blockName, cssModule),
   } as const;
 }

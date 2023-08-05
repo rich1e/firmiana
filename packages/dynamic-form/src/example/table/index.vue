@@ -52,7 +52,6 @@
     // row[cell.prop].show = false;
     // event.target.nextElementSibling.firstElementChild
     console.log(event, cell, row);
-    // debugger;
 
     event.target.style.display = 'none';
     const cellInput = document.createElement('input');
@@ -84,7 +83,6 @@
     row[cell.prop].show = false;
     const cellInput = event.target.nextElementSibling.firstElementChild;
     console.log(event, cell, row);
-    // debugger;
 
     // event.target.style.display = 'none';
     // const cellInput = document.createElement('input');
@@ -154,8 +152,6 @@
 
     tableData.value.push(item as any);
 
-    // debugger
-
     // refTable.value!.setScrollTop()
 
     // document.querySelectorAll('.gName1').forEach((item: any) => {
@@ -168,7 +164,6 @@
 
   const onblurHandler = (event: any, row: any, cell: any) => {
     // row[cell.prop].show = true
-    // debugger;
     console.log('onblurHandler');
     console.log(event.target.value);
     if (!event.target.value && isNewItem.value) {

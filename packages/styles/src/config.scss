@@ -1,0 +1,22 @@
+/*
+ * @Author       : gongyuqi@max-optics.com
+ * @Date         : 2023-07-25 14:46:35
+ * @LastEditors  : yuqigong@outlook.com
+ * @LastEditTime : 2023-08-05 19:00:13
+ */
+
+/**
+ * Global variable configuration file
+ * @access public
+ * @name namespace 所有的组件以 'fir' 开头，如 fir-inupt-expression
+ * @name common-separator 公共的连接符
+ * @name element-separator 元素以__分割，如 fir-input__inner
+ * @name modifier-separator 修饰符以--分割，如 fir-input--mini
+ * @name state-prefix 状态以is-开头，如 is-disabled
+*/
+
+$namespace: 'fir' !default;
+$common-separator: '-' !default;
+$element-separator: '__' !default;
+$modifier-separator: '--' !default;
+$state-prefix: 'is-' !default;

@@ -1,0 +1,43 @@
+@use './config.scss' as *;
+
+/**
+* Block
+* Define a block and add namespaces
+* @access public
+* @param {String} $block - Block's name
+*/
+@mixin b($block) {
+  $block-name: $namespace + $common-separator + $block !global;
+
+  .#{$block-name} {
+    @content;
+  }
+}
+
+/**
+  * Block Element
+  * Elements get appended with "__" and the $element
+  * @access public
+  * @param {String} $element - Element's name
+*/
+@mixin e($element) {
+  $element-name: & + $element-separator + $element;
+
+  @at-root #{$element-name} {
+    @content;
+  }
+}
+
+/**
+  * Block Modifier
+  * Modifiers get appended with "--" and the $modifier
+  * @access public
+  * @param {String} $modifier - Modifier's name
+*/
+@mixin m($modifier) {
+  $modifier-name: & + $modifier-separator + $modifier;
+
+  @at-root #{$modifier-name} {
+    @content;
+  }
+}

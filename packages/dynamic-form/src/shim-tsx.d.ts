@@ -1,11 +1,8 @@
 /*
- * @Author: yuqigong@outlook.com
- * @Date: 2022-11-24 15:35:04
- * @LastEditors: yuqigong@outlook.com
- * @LastEditTime: 2022-11-24 15:54:58
- * @FilePath: /vue-form/src/shim-tsx.d.ts
- * @Description:
- *
+ * @Author       : yuqigong@outlook.com
+ * @Date         : 2022-11-24 15:35:04
+ * @LastEditors  : yuqigong@outlook.com
+ * @LastEditTime : 2023-07-28 16:16:51
  */
 
 /**
@@ -20,7 +17,7 @@ interface VueAttributes {
   key?: string | number;
   slot?: string;
   scopedSlots?: Record<string, Function>;
-  ref?: string;
+  ref?: string | any;
   class?: string;
   children?: any;
   domProps?: { [key: string]: any };
