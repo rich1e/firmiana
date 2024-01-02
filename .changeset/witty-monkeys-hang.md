@@ -2,4 +2,4 @@
 '@firmiana/dynamic-form': major
 ---
 
-add components
+添加示例 examlpe

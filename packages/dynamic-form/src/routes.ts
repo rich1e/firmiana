@@ -172,6 +172,38 @@ const routes: AppRouteRecord[] = [
   },
 
   {
+    path: '/passive',
+    component: () => import('./example/passive/index.vue'),
+    meta: {
+      title: '',
+    },
+  },
+
+  {
+    path: '/expression-evaluator',
+    component: () => import('./example/expression-evaluator/index.vue'),
+    meta: {
+      title: '',
+    },
+  },
+
+  {
+    path: '/watch-an-object',
+    component: () => import('./example/watch-an-object/index.vue'),
+    meta: {
+      title: '',
+    },
+  },
+
+  {
+    path: '/vxe-table',
+    component: () => import('./example/vxe-table/index.vue'),
+    meta: {
+      title: '',
+    },
+  },
+
+  {
     path: '/components',
     component: () => import('./example/element/index.vue'),
     meta: {
