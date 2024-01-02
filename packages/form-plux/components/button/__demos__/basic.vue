@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <button>按钮一</button>
-    <button>按钮二</button>
-    <button>按钮三</button>
-  </div>
+  <button>text 1</button>
+  <button>text 2</button>
+  <button>text 3</button>
 </template>
