@@ -1,5 +1,11 @@
 # dynamic-form
 
+## 7.0.0
+
+### Major Changes
+
+- [`50a65bf`](https://github.com/rich1e/firmiana/commit/50a65bfdc167b3bd74fb2e9d4cdb7563ea03136d) Thanks [@rich1e](https://github.com/rich1e)! - 添加示例 examlpe
+
 ## 6.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @firmiana/form-plux
 
+## 2.0.0
+
+### Major Changes
+
+- [`1ded3f0`](https://github.com/rich1e/firmiana/commit/1ded3f070a77b9840e72add9f12c37621e59222d) Thanks [@rich1e](https://github.com/rich1e)! - 修改动态表单
+
 ## 1.5.0
 
 ### Minor Changes
